@@ -110,6 +110,8 @@
     - (like integration with proprietary webapps or servlets) you might have
     - to change this parameter.
     -->
+
+  <!--  前端控制器  -->
   <servlet>
     <servlet-name>mvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -129,6 +131,8 @@
        会通过ThreadContext在当前线程中绑定一个subject和SecurityManager，供请求内使用可以骑过
        SecurityUtils.getSubject()获取Subject
    -->
+
+  <!-- shiro -->
   <filter>
     <filter-name>shiroFilter</filter-name>
     <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
@@ -138,7 +142,7 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <!-- 在项目启动时，加载 web-info or classpath下的shiro.ini, 并构建websecurityManager,
+  <!-- shiro监听器 在项目启动时，加载 web-info or classpath下的shiro.ini, 并构建websecurityManager,
        构建所有配置中使用的过滤链（anno,authc等），ShiroFilter会获取此过滤器链
        -->
   <listener>
@@ -152,7 +156,7 @@
   </context-param> -->
 
 
-  <!-- spring工程 -->
+  <!-- spring监听器 -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
