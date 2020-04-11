@@ -81,4 +81,16 @@
         <property name="basePackage" value="com.pc.dao"/>
     </bean>
 
+    <!-- 配置注释扫描，让spring去发现注释，进而实现对应的功能 -->
+    <context:component-scan base-package="com.pc">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 事务管理器 -->
+    <bean id="tx" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="druid"/>
+    </bean>
+
+    <!-- 支持实现事务 -->
+    <tx:annotation-driven transaction-manager="tx"/>
 </beans>

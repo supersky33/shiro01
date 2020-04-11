@@ -92,7 +92,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>5.1.7.RELEASE</version>
+      <version>4.3.6.RELEASE</version>
     </dependency>
 
     <!-- ====== Servlet ======= -->
@@ -197,6 +197,7 @@
         <includes>
           <include>**/*.xml</include>
           <include>**/*.properties</include>
+          <include>**/*.ini</include>
         </includes>
         <filtering>false</filtering>
       </resource>

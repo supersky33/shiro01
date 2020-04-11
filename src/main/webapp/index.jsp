@@ -44,5 +44,8 @@
    <shiro:hasPermission name="user:query">
        <a href="#">权限 ：用户查询权限</a>
    </shiro:hasPermission>
+   <shiro:hasPermission name="user:delete">
+       <a href="#">权限 ：用户删除权限</a>
+   </shiro:hasPermission>
 </body>
 </html>
