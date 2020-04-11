@@ -1,4 +1,4 @@
-package com.pc.com.pc.pojo;
+package com.pc.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,4 +11,5 @@ public class User {
     private Integer id;
     private String username;
     private String password;
+
 }
