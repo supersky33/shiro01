@@ -1,6 +1,6 @@
 package com.pc.controller;
 
-import com.pc.com.pc.pojo.User;
+import com.pc.pojo.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
